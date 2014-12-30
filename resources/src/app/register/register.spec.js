@@ -4,8 +4,8 @@
  * build process will exclude all `.spec.js` files from the build
  * automatically.
  */
-describe( 'home section', function() {
-  beforeEach( module( 'finnegan.home' ) );
+describe( 'register section', function() {
+  beforeEach( module( 'finnegan.register' ) );
 
   it( 'should have a dummy test', inject( function() {
     expect( true ).toBeTruthy();

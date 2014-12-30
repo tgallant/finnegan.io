@@ -12,7 +12,7 @@
  * The dependencies block here is also where component dependencies should be
  * specified, as shown below.
  */
-angular.module( 'finnegan.home', [
+angular.module( 'finnegan.login', [
   'ui.router'
 ])
 
@@ -22,23 +22,23 @@ angular.module( 'finnegan.home', [
  * this way makes each module more "self-contained".
  */
 .config(function config( $stateProvider ) {
-  $stateProvider.state( 'home', {
-    url: '/home',
+  $stateProvider.state( 'login', {
+    url: '/login',
     views: {
       "main": {
-        controller: 'HomeCtrl',
-        templateUrl: 'home/home.tpl.html'
+        controller: 'LoginCtrl',
+        templateUrl: 'login/login.tpl.html'
       }
     },
-    data:{ pageTitle: 'Home' }
+    data:{ pageTitle: 'Login' }
   });
 })
 
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope ) {
-})
-
-;
-
+.controller( 'LoginCtrl', function LoginController( $scope ) {
+  $scope.submit = function(user) {
+    console.log(user);
+  };
+});
